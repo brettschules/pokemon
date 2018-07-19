@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Pokemon } from './pokemon';
+import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -12,7 +15,9 @@ export class PokemonService {
 
   private pokemonUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
-  getPokemons(): null {
-    return this.http.get(this.pokemonUrl);
+  getPokemons(): Observable<Pokemon[]> {
+    return this.http.get<Pokemon[]>(this.pokemonUrl);
   }
+
+
 }
