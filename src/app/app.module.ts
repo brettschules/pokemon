@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { PokemonListComponent } from './pokemon/pokemon-list/pokemon-list.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { PokemonInfoComponent } from './pokemon/pokemon-info/pokemon-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonListComponent,
-    NavbarComponent
+    NavbarComponent,
+    PokemonInfoComponent
   ],
   imports: [
     BrowserModule,
