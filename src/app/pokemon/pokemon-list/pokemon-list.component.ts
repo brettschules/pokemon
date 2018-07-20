@@ -18,12 +18,10 @@ export class PokemonListComponent implements OnInit {
     this.pokemons = this.pokemonService.getPokemons()
     .subscribe(data => {
       this.pokemons = data.results;
-      console.log(data.results, 'pokemons fetched')
     });
   }
 
   navigateToPokemon(pokemon: Pokemon): void {
-    console.log(pokemon, 'pokemon Selected!')
     var id = parseInt(pokemon.url.slice(34, 35), 10);
     this.router.navigate(['/info', id]);
   }

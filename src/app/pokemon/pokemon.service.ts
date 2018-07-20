@@ -19,6 +19,11 @@ export class PokemonService {
     return this.http.get<Pokemon[]>(this.pokemonUrl);
   }
 
+  getPokemonById(id: number): Observable<Pokemon> {
+    var url = this.pokemonUrl + id.toString();
+    return this.http.get<Pokemon>(this.pokemonUrl + id.toString());
+  }
+
 
 
 }
