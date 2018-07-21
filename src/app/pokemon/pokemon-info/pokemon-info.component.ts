@@ -18,6 +18,8 @@ export class PokemonInfoComponent implements OnInit {
   ) { }
 
   pokemon: Pokemon;
+  name = 'pokemon';
+  isEditing = false;
 
   getPokemonById() :void {
     const id = +this.route.snapshot.paramMap.get('id');
@@ -26,6 +28,13 @@ export class PokemonInfoComponent implements OnInit {
         this.pokemon = data;
         console.log(this.pokemon, 'pokemons fetched')
       });
+  }
+
+  open(name: string) :void {
+    if(name = this.name) {
+      this.isEditing = true;
+      console.log(this.isEditing)
+    }
   }
 
   ngOnInit() {
