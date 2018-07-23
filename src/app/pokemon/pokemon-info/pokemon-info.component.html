@@ -1,10 +1,10 @@
 <div *ngIf="pokemon" [hidden]="isEditing" class="card pointer"  (click)="open('pokemon')" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{pokemon.name}}</h5>
+    <h5 appCcCardHover class="card-title">{{pokemon.name}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">Weight: {{pokemon.weight}}</h6>
     <h3>Stats</h3>
     <ul>
-      <li *ngFor="let stat of pokemon.stats">
+      <li *ngFor="let stat of pokemon.stats" >
         {{stat.base_stat}}
       </li>
     </ul>

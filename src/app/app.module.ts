@@ -8,13 +8,15 @@ import { PokemonListComponent } from './pokemon/pokemon-list/pokemon-list.compon
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { PokemonInfoComponent } from './pokemon/pokemon-info/pokemon-info.component';
+import { CcCardHoverDirective } from './common/cc-card-hover.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonListComponent,
     NavbarComponent,
-    PokemonInfoComponent
+    PokemonInfoComponent,
+    CcCardHoverDirective
   ],
   imports: [
     BrowserModule,
