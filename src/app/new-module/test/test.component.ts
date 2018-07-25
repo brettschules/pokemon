@@ -12,4 +12,10 @@ export class TestComponent implements OnInit {
   ngOnInit() {
   }
 
+  test(params: string): string {
+    return "Hi";
+  }
+
+  
+
 }
